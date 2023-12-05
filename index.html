@@ -6,7 +6,8 @@
         <title>Portfolio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media-query.css">
 
         <!--box icons links-->
         <link rel="stylesheet"
@@ -20,6 +21,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;
         400;500;600;700;800;900&family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <!--Header-->
@@ -43,7 +45,7 @@
 
         <!--Hero section-->
         <section class="hero" id="home">
-            <div class="main-content">
+            <div class="main-content" data-aos="fade-in">
                 <h4>Hello</h4>
                 <h1>I'm <span>Alex Kiriungi</span></h1>
                 <p>Lorem ipsum dolor, sit amet consectetur 
@@ -65,11 +67,11 @@
 
         <!--About section-->
         <section class="about" id="about">
-            <div class="about-img">
+            <div class="about-img" data-aos="zoom-in-down">
                 <img src="img/background.jpg" height="500px" width="100%">
             </div>
 
-            <div class="about-text">
+            <div class="about-text" data-aos="zoom-in-up">
                 <h2>I am Software <span>Engineer</span> <br> & MERN stack 
                     Developer</h2>
                 <div class="exp-area">
@@ -110,11 +112,11 @@
         
         <!--Skills-->
         <section class="skills" id="skills">
-            <div class="center-text">
+            <div class="center-text" data-aos="fade-down">
                 <h2>My <span>Skills</span></h2>
             </div>
 
-            <div class="skills-content">
+            <div class="skills-content" data-aos="zoom-in-up">
                 <div class="box">
                     <h3><span>Front-</span>End</h3>
                     <div class="front-logo">
@@ -153,11 +155,11 @@
 
         <!--Portfolio section-->
         <section class="portfolio" id="portfolio">
-            <div class="center-text">
+            <div class="center-text" data-aos="fade-down"">
                 <h2>My <span>Portfolio</span></h2>
             </div>
 
-            <div class="portfolio-content">
+            <div class="portfolio-content" data-aos="zoom-in-up">
                 <div class="row">
                     <img src="img/portfolio1.jpg">
                     <div class="main-row">
@@ -246,11 +248,11 @@
 
         <!--Contact section-->
         <section class="contact" id="contact">
-            <div class="center-text">
+            <div class="center-text" data-aos="fade-down">
                 <h2>Contact <span>Me</span></h2>
             </div>
 
-            <div class="contact-form">
+            <div class="contact-form" data-aos="zoom-in">
                 <form action="" method="">
                     <input type="text" placeholder="Your name" required>
                     <input type="email" placeholder="Email Address.."
@@ -274,6 +276,13 @@
             </a>
         </div>
 
-        <script src="js/script.js" async defer></script>
+        <script src="js/script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            offset: 300,
+            duration: 1400,
+          });
+        </script>
     </body>
 </html>
