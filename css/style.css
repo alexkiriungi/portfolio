@@ -601,6 +601,9 @@ form .send-btn:hover {
     .main-content p {
         width: 100%;
     }
+    .main-content h1 {
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 470px) {
@@ -616,5 +619,41 @@ form .send-btn:hover {
         border-radius: 50%;
         object-fit: cover;
         margin: 0 auto;
+    }
+    .main-content h1 {
+        font-size: 20px;
+    }
+}
+
+/*The Afterworks magic*/
+
+.main-content .text {
+    position: relative;
+}
+
+.text.sec-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--main-color);
+    animation: animate 4s steps(12) infinite;
+}
+
+.text.sec-text::after {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes animate {
+    40%, 60% {
+        left: calc(100% + 4px);
+    }
+    100% {
+        left: 0%;
     }
 }
