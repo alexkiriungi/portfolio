@@ -289,6 +289,7 @@ header.sticky {
 .logos-slide img {
     height: 50px;
     margin: 0 40px;
+    filter: brightness(1.75);
 }
 
 .portfolio {
@@ -448,7 +449,7 @@ form .send-btn:hover {
     header {
         padding: 20px 8%;
     }
-    header.stickt {
+    header.sticky {
         padding: 14px 8%;
     }
     section {

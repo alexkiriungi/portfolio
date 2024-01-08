@@ -4,6 +4,7 @@ let navlist = document.querySelector(".navlist");
 const btn = document.querySelector(".send-btn");
 const btn1 = document.querySelector(".top-btn");
 
+
 window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 120);
 });
