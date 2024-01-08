@@ -242,94 +242,53 @@ header.sticky {
 }
 
 .skills-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    margin-top: 4.2rem;
-    grid-auto-rows: 1fr;
-}
-
-.skills-content > .box {
-    
-    height: 500px;
-    padding: 80px 40px 66px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #2d343f;
-    border-radius: 28px;
-    border: 1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
-    cursor: pointer;
-    transition: all .50s ease;
-}
-
-.skills-content > .box:hover {
-    border: 1px solid var(--main-color);
-    transform: translateY(-5px) scale(1.03);
-}
-
-.skills-content > .box h3 {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
     position: relative;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.skills-content:before,
+.skills-content:after {
+    position: absolute;
     top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.skills-content:before {
     left: 0;
-    color: var(--text-color);
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 20px;
+    background: linear-gradient(to left, rgba(255,255,255, 0), var(--second-bg-color));
 }
 
-.skills-content > .box >.front-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+.skills-content:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255, 0), var(--second-bg-color));
 }
 
-.skills-content > .box >.front-logo img {
-    object-fit: contain;
-    max-height: 40px;
-    max-width: 40px;
-    font-size: 10px;
+.skills-content:hover .logos-slide {
+    animation-play-state: paused;
 }
 
-.skills-content > .box >.back-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
 }
 
-.skills-content > .box >.back-logo img {
-    object-fit: contain;
-    max-height: 40px;
-    max-width: 40px;
-    font-size: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.skills-content > .box >.mid-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.skills-content > .box >.mid-logo img {
-    object-fit: contain;
-    max-height: 40px;
-    max-width: 40px;
-    font-size: 10px;
+.logos-slide img {
+    height: 50px;
+    margin: 0 40px;
 }
 
 .portfolio {
